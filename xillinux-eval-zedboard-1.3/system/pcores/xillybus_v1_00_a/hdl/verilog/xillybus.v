@@ -15,6 +15,7 @@ module xillybus #(
 		  )
   (
    input S_AXI_ACLK,
+   input S_LOGIC_CLK,
    input S_AXI_ARESETN,
    output Interrupt,
    input [(C_S_AXI_ADDR_WIDTH-1):0] S_AXI_AWADDR,
@@ -65,7 +66,8 @@ module xillybus #(
    output m_axi_bready,
    input m_axi_bvalid,
    input [1:0] m_axi_bresp,
-   
+
+   output xillybus_logic_clk,
    output xillybus_bus_clk,
    output reg xillybus_bus_rst_n,
    output [(C_S_AXI_ADDR_WIDTH-1):0] xillybus_S_AXI_AWADDR,
@@ -132,6 +134,7 @@ module xillybus #(
    // is external to the processor. This makes it possible to swap the Xillybus
    // core without reimplementing the processor.
 
+   assign xillybus_logic_clock = S_LOGIC_CLOCK ;
    assign xillybus_bus_clk = S_AXI_ACLK ;
    assign xillybus_S_AXI_AWADDR = S_AXI_AWADDR ;
    assign xillybus_S_AXI_AWVALID = S_AXI_AWVALID ;
