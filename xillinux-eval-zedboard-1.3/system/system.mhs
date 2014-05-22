@@ -33,6 +33,7 @@
  PORT processing_system7_0_DDR_VRN = processing_system7_0_DDR_VRN, DIR = IO
  PORT processing_system7_0_DDR_VRP = processing_system7_0_DDR_VRP, DIR = IO
  PORT xillybus_bus_clk = xillybus_0_xillybus_bus_clk, DIR = O
+ PORT xillybus_logic_clk = xillybus_0_xillybus_logic_clk, DIR = O
  PORT xillybus_bus_rst_n = xillybus_0_xillybus_bus_rst_n, DIR = O
  PORT xillybus_S_AXI_AWADDR = xillybus_0_xillybus_S_AXI_AWADDR, DIR = O, VEC = [31:0]
  PORT xillybus_S_AXI_AWVALID = xillybus_0_xillybus_S_AXI_AWVALID, DIR = O
