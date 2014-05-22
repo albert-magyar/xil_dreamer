@@ -40,6 +40,7 @@ PARAMETER C_S_AXI_PROTOCOL = AXI4LITE, TYPE = NON_HDL, ASSIGNMENT = CONSTANT, DT
 
 ## Ports
 PORT S_AXI_ACLK = "", DIR = I, SIGIS = CLK, BUS = S_AXI
+PORT S_LOGIC_CLK = "", DIR = I, SIGIS = CLK
 PORT S_AXI_ARESETN = ARESETN, DIR = I, SIGIS = RST, BUS = S_AXI
 PORT Interrupt = "", DIR = O, INTERRUPT_PRIORITY = LOW, SIGIS = INTERRUPT, SENSITIVITY = EDGE_RISING
 PORT S_AXI_AWADDR = AWADDR, DIR = I, VEC = [(C_S_AXI_ADDR_WIDTH-1):0], ENDIAN = LITTLE, BUS = S_AXI
@@ -92,6 +93,7 @@ PORT m_axi_bvalid = BVALID, DIR = I, BUS = M_AXI
 PORT m_axi_bresp = BRESP, DIR = I, VEC = [1:0], BUS = M_AXI
 
 PORT xillybus_bus_clk = "", DIR = O
+PORT xillybus_logic_clk = "", DIR = O
 PORT xillybus_bus_rst_n = "", DIR = O
 PORT xillybus_S_AXI_AWADDR = "", DIR = O, VEC = [(C_S_AXI_ADDR_WIDTH-1):0]
 PORT xillybus_S_AXI_AWVALID = "", DIR = O

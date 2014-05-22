@@ -67,8 +67,8 @@ module xillybus #(
    input m_axi_bvalid,
    input [1:0] m_axi_bresp,
 
-   output xillybus_logic_clk,
    output xillybus_bus_clk,
+   output xillybus_logic_clk,
    output reg xillybus_bus_rst_n,
    output [(C_S_AXI_ADDR_WIDTH-1):0] xillybus_S_AXI_AWADDR,
    output xillybus_S_AXI_AWVALID,
