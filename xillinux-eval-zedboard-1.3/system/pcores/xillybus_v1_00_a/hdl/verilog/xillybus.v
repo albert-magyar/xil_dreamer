@@ -134,7 +134,7 @@ module xillybus #(
    // is external to the processor. This makes it possible to swap the Xillybus
    // core without reimplementing the processor.
 
-   assign xillybus_logic_clock = S_LOGIC_CLOCK ;
+   assign xillybus_logic_clk = S_LOGIC_CLK ;
    assign xillybus_bus_clk = S_AXI_ACLK ;
    assign xillybus_S_AXI_AWADDR = S_AXI_AWADDR ;
    assign xillybus_S_AXI_AWVALID = S_AXI_AWVALID ;
