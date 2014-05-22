@@ -230,7 +230,10 @@ BEGIN xillybus
  BUS_INTERFACE M_AXI = axi_interconnect_0
  PORT m_axi_aclk = processing_system7_0_FCLK_CLK1
  PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK1
+ PORT S_LOGIC_CLK = processing_system7_0_FCLK_CLK2
+
  PORT xillybus_bus_clk = xillybus_0_xillybus_bus_clk
+ PORT xillybus_logic_clk = xillybus_0_xillybus_logic_clk
  PORT xillybus_bus_rst_n = xillybus_0_xillybus_bus_rst_n
  PORT xillybus_S_AXI_AWADDR = xillybus_0_xillybus_S_AXI_AWADDR
  PORT xillybus_S_AXI_AWVALID = xillybus_0_xillybus_S_AXI_AWVALID
